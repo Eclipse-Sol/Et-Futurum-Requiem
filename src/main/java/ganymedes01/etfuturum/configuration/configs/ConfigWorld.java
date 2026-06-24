@@ -24,6 +24,7 @@ public class ConfigWorld extends ConfigBase {
 	public static BlockMetaPair amethystMiddleBlock;
 
 	public static boolean enableDmgIndicator;
+	public static boolean modernLightmapGamma;
 	public static boolean enableAirDebris;
 	public static int debrisMax = 3;
 	public static int maxNetherGoldPerCluster;
@@ -92,6 +93,7 @@ public class ConfigWorld extends ConfigBase {
 	@Override
 	protected void syncConfigOptions() {
 		enableDmgIndicator = getBoolean("enableDmgIndicator", catClient, true, "Heart Damage Indicator");
+		modernLightmapGamma = getBoolean("modernLightmapGamma", catClient, true, "Replaces the vanilla brightness-slider curve with the modern hue and saturation preserving one");
 
 		enableAirDebris = getBoolean("enableAirDebris", catGeneration, false, "Can ancient debris generate next to air?");
 		maxStonesPerCluster = getInt("maxStonesPerCluster", catGeneration, 32, 0, 64, "Max vein size for Granite/Andesite/Diorite blocks in a cluster");

@@ -128,6 +128,10 @@ public class EtFuturumEarlyMixins implements IFMLLoadingPlugin, IEarlyMixinLoade
 			mixins.add("randomtickspeed.MixinGameRules");
 		}
 
+		if (ConfigWorld.modernLightmapGamma && side == MixinEnvironment.Side.CLIENT) {
+			mixins.add("modernlightmap.client.MixinEntityRenderer");
+		}
+
 		if (ConfigMixins.creativeFlightSpeedModifier > 1 || ConfigTweaks.creativeFlightVerticalModifier > 1) {
 			mixins.add("flyspeed.MixinEntityPlayer");
 		}
